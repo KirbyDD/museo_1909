@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require_relative '../lib/artist.rb'
 
-class ArtistTest < Minitest::ArtistTest
+class ArtistTest < Minitest::Test
   def setup
     attributes = {
       id: "2",
@@ -20,7 +20,7 @@ class ArtistTest < Minitest::ArtistTest
   end
 
   def test_it_has_an_id
-    assert_equal "2", @artist.name
+    assert_equal "2", @artist.id
   end
 
   def test_it_has_a_name
@@ -38,5 +38,5 @@ class ArtistTest < Minitest::ArtistTest
   def test_it_has_a_country
     assert_equal "United States", @artist.country
   end
-  
+
 end
